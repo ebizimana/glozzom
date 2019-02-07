@@ -64,3 +64,8 @@ body {
 #video-play a {
   color: #fff;
 }
+
+#main-footer {
+  background: rgb(0, 0, 0);
+  color: #fff;
+}

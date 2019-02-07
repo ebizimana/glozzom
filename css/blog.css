@@ -19,20 +19,6 @@
   padding-top: 50px;
 }
 
-#faq .card {
-  border: #444;
-}
-
-#faq a {
-  color: #fff;
-  text-decoration: none;
-}
-
-#faq .card-body,
-#faq .card-header {
-  background: #333;
-}
-
 #main-footer {
   background: rgb(0, 0, 0);
   color: #fff;

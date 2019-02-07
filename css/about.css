@@ -22,3 +22,8 @@
 .about-img {
   margin-top: -50px;
 }
+
+#main-footer {
+  background: rgb(0, 0, 0);
+  color: #fff;
+}
