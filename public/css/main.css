@@ -13,7 +13,7 @@ body {
   }
   
   .carousel-item {
-    height: 450px;
+    height: 660px;
   }
   
   .carousel-image-1 {
@@ -24,11 +24,13 @@ body {
   .carousel-image-2 {
     background: url("../img/image2.jpg");
     background-size: cover;
+    background-position: 0 -200px;
   }
   
   .carousel-image-3 {
     background: url("../img/image3.jpg");
     background-size: cover;
+    background-position: 0 -200px;
   }
   
   #home-heading {
