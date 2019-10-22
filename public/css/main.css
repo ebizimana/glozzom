@@ -111,10 +111,10 @@ body {
   }
 
   .bg-green {
-    background-color: rgb(49, 131, 63);
+    background-color: rgb(47, 64, 110);
   }
   .text-green {
-    color:rgb(49, 131, 63);
+    background-color: rgb(47, 64, 110);
   }
   .modal-dialog{
     width:100%
