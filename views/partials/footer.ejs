@@ -104,5 +104,18 @@
 
 <script>
     $(document).ready(function () {
+        $('.displayMainRow').click(function () {
+            storyOne = document.getElementById('pageOne')
+            storyTwo = document.getElementById('pageTwo')
+            storyTwo.style.display = 'none'
+            storyOne.style.display = 'flex'
+        })
+        $('#pageBtnTwo').click(function(){
+            storyOne = document.getElementById('pageOne')
+            storyTwo = document.getElementById('pageTwo')
+            storyTwo.style.display = 'flex'
+            storyOne.style.display = 'none'
+            
+        })
     })
 </script>
