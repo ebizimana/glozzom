@@ -21,4 +21,10 @@ router.get("/contact.html", function (req, res) {
     res.render("../views/web/contact");
 });
 
+// Apply Page
+router.get("/apply", function (req, res) {
+    res.render("../views/web/apply");
+});
+
+
 module.exports = router
