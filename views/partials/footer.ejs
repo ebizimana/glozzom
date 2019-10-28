@@ -1,5 +1,19 @@
 <!-- FOOTER -->
+
 <footer id="main-footer" class="text-center p-5">
+    <!-- DONATE -->
+    <section id="donnate">
+        <div class="fixed-bottom m-5 d-flex justify-content-end">
+            <a href="#"
+            data-toggle="popover" data-trigger="hover" data-placement="top" 
+            title="Contribute to the Mission" 
+            data-content="Help a kid in need right now, by donnating to Mountain Mission School">
+                <i class="fas fa-donate fa-5x donnateIcon" style="color:#539421" ></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- The actual footer -->
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -79,6 +93,12 @@
         pause: "hover"
     });
 
+    // TODO: Fix this,  Testimony Slider 
+    $(".slider").carousel({
+        interval: 1,
+        pause: "hover"
+    });
+
     // Lightbox Init
     $(document).on("click", '[data-toggle="lightbox"]', function (event) {
         event.preventDefault();
@@ -110,12 +130,19 @@
             storyTwo.style.display = 'none'
             storyOne.style.display = 'flex'
         })
-        $('#pageBtnTwo').click(function(){
+        $('#pageBtnTwo').click(function () {
             storyOne = document.getElementById('pageOne')
             storyTwo = document.getElementById('pageTwo')
             storyTwo.style.display = 'flex'
             storyOne.style.display = 'none'
-            
+
         })
+
+        $('[data-toggle="popover"]').popover()
+
+        $('.donnateIcon').popover({
+            trigger: 'hover'
+        })
+
     })
 </script>

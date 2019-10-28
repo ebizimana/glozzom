@@ -1,7 +1,7 @@
 body {
     overflow-x: hidden;
-    font-family:Georgia, Times, serif; 
-    /* font-size:24px; */
+    font-family:Georgia, Times, serif;
+    margin: auto;
   }
   .navbar .nav-link {
     font-size: 14px;
@@ -40,7 +40,7 @@ body {
     min-height: 200px;
     background: url("../img/Jesus\ Statue.png");
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     text-align: center;
     color: #fff;
   }
@@ -156,10 +156,11 @@ body {
     color: #fff;
   }
 
-  /* LIST #2 */
+  /* About Page: Three thems  #2 */
 #list2 { width:320px; }
 #list2 ol { font-style:italic; font-family:Georgia, Times, serif; font-size:24px; color:#6acbf8;  }
 #list2 ol li { }
 #list2 ol li p { padding:8px; font-style:normal; font-family:Arial; font-size:16px; color:rgb(14, 13, 13); border-left: 1px solid #999; }
 #list2 ol li p em { display:block; }
-  
+
+
