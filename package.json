@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/ebizimana/glozzom#readme",
   "dependencies": {
+    "@chenfengyuan/datepicker": "^1.0.9",
+    "air-datepicker": "^2.2.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "g": "^2.0.1",

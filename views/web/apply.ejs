@@ -1,8 +1,109 @@
-<body>
+<body id="applyPage">
     <% include ../partials/header.ejs %>
 
-    <section id="applyPage">
-        <h1>I am on the apply Page</h1>
+    <section class="h-75">
+        <div class="card mx-auto w-50 applicationCard">
+            <div class="card-body">
+                <h5 class="card-title text-center">Mountain Mission School Application</h5>
+                <h6 class="card-subtitle mb-2 text-muted text-center">Child's Identity</h6>
+                <form>
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control text-center" id="lastName"
+                                    placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control text-center" id="firstName"
+                                    aria-describedby="firstName" placeholder="First Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control text-center" id="middleName"
+                                    placeholder="Middle Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 mr-4">
+                            <div class="dropdown">
+                                <button class="btn btn-outline-dark dropdown-toggle px-5" type="button" id="sexMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Sex
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="sexMenuButton">
+                                    <a class="dropdown-item" href="#">Male</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Female</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Rarther not say</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <div class="dates">
+                                    <input type="text" name="dob" autocomplete="off" id="user1"
+                                        class="form-control text-center" placeholder="Birthdate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="number" class="form-control text-center" placeholder="Present Age">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control text-center" placeholder="Place of Birth">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="password" class="form-control text-center"
+                                    placeholder="Social Security No.">
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="form-group form-check mb-0">
+                                <label for="anotherName">
+                                    Does child go by another name than that listed?
+                                </label>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-4 ml-5">
+                                    <input type="checkbox" class="form-check-input">
+                                    <label class="form-check-label" for="anotherNameYes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="col-md-2 ml-0">
+                                    <input type="checkbox" class="form-check-input">
+                                    <label class="form-check-label" for="anotherNameNo">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                </form>
+                <div class="d-flex mt-4">
+                    <a href="#" class="card-link mr-auto">Back</a>
+                    <a href="#" class="card-link">Continue</a>
+                </div>
+
+            </div>
+        </div>
     </section>
     <% include ../partials/footer  %>
 </body>
