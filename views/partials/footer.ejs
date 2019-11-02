@@ -77,6 +77,8 @@
 <!-- ekko-lightbox -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
 
 <script>
     // Get the current year for the copyright
@@ -97,6 +99,31 @@
         })
 
     })
+
+    // Wrap every letter .
+    var textWrapper1 = document.querySelector('.ml3');
+    textWrapper2 = document.querySelector('.ml2')
+    textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({
+            loop: false,
+        })
+        .add({
+            targets: ['.ml3 .letter', '.ml2 .letter'],
+            opacity: [0, 1],
+            easing: "easeInOutQuad",
+            duration: 500,
+            delay: (el, i) => 150 * (i + 1)
+        });
+
+    anime({
+        targets: '.ml1',
+        translateX: [100, 250], // from 100 to 250
+        delay: 500,
+        direction: 'alternate',
+        loop: true
+    });
 </script>
 
 <script>
@@ -149,6 +176,13 @@
             storyTwo.style.display = 'flex'
             storyOne.style.display = 'none'
 
+        })
+
+        $('.ml1').click(function(){
+            cardApplication = document.getElementById('cardApplication')
+            wlcmsg = document.getElementById('wlcmsg')
+            wlcmsg.style.display = 'none'
+            cardApplication.style.display = 'flex'
         })
 
         $('[data-toggle="popover"]').popover()
