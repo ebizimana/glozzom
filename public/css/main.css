@@ -216,3 +216,30 @@ body {
     font-size:2.5em;
 
   }
+
+  /* Flip Effect */
+  .card-container {
+    position: relative;
+    width: 18rem;
+    perspective: 200rem;
+    height: 400px;
+  }
+
+  .card-container:hover .card-front {
+    transform: rotateY(180deg)
+  }
+  .card-container:hover .card-back {
+    transform: rotateY(0deg)
+  }
+
+  .card-back {
+    transform: rotateY(180deg)
+  }
+
+  .card-flip {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 0.9s;
+    backface-visibility: hidden;
+  }

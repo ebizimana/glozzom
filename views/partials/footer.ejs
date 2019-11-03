@@ -57,6 +57,9 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
 </script>
 
+<!-- Flip  -->
+<!-- <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script> -->
+
 <!-- Date Picker -->
 <script src="bootstrap-datepicker.js"></script>
 
@@ -81,6 +84,11 @@
 
 
 <script>
+    // // Flip effect
+
+    // $("#card").flip();
+    // // $("#card").flip('toggle');
+
     // Get the current year for the copyright
     $("#year").text(new Date().getFullYear());
 
@@ -163,6 +171,7 @@
 </script>
 
 <script>
+    document.getElementById('cardApplication').style.display = 'none'
     $(document).ready(function () {
         $('.displayMainRow').click(function () {
             storyOne = document.getElementById('pageOne')
@@ -178,7 +187,7 @@
 
         })
 
-        $('.ml1').click(function(){
+        $('.ml1').click(function () {
             cardApplication = document.getElementById('cardApplication')
             wlcmsg = document.getElementById('wlcmsg')
             wlcmsg.style.display = 'none'
