@@ -84,10 +84,17 @@
 
 
 <script>
-    // // Flip effect
+    // Configure Slider
+    $(".carousel").carousel({
+        interval: 6000,
+        pause: "hover"
+    });
 
-    // $("#card").flip();
-    // // $("#card").flip('toggle');
+    // Flip effect
+    $('.ml1').on('click', function () {
+        $('.card-front').addClass('card-container card-flip clickedFront');
+        $('.card-back').addClass('card-container card-flip clickedBack')
+    });
 
     // Get the current year for the copyright
     $("#year").text(new Date().getFullYear());
@@ -105,10 +112,9 @@
             'format': 'yyyy-mm-dd',
             'autoclose': true
         })
-
     })
 
-    // Wrap every letter .
+    // Wrap every letter.
     var textWrapper1 = document.querySelector('.ml3');
     textWrapper2 = document.querySelector('.ml2')
     textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -127,7 +133,7 @@
 
     anime({
         targets: '.ml1',
-        translateX: [100, 250], // from 100 to 250
+        translateX: [100, 250],
         delay: 500,
         direction: 'alternate',
         loop: true
@@ -135,12 +141,6 @@
 </script>
 
 <script>
-    // Configure Slider
-    $(".carousel").carousel({
-        interval: 6000,
-        pause: "hover"
-    });
-
     // TODO: Fix this,  Testimony Slider 
     $(".slider").carousel({
         interval: 1,
@@ -171,7 +171,6 @@
 </script>
 
 <script>
-    document.getElementById('cardApplication').style.display = 'none'
     $(document).ready(function () {
         $('.displayMainRow').click(function () {
             storyOne = document.getElementById('pageOne')
@@ -200,6 +199,6 @@
             trigger: 'hover'
         })
 
-
     })
+    document.getElementById('cardApplication').style.display = 'none'
 </script>

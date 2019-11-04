@@ -1,18 +1,151 @@
 <body id="applyPage">
     <% include ../partials/header.ejs %>
 
-    <!-- Introductoin -->
-    <section class="h-75 mx-auto text-center" id="wlcmsg">
-        <p class="ml3 mx-auto mb-0">Welcome to Mount Missin School </p>
-        <p class="ml2 mb-5">We are excited that you are here</p>
-        <button class="btn btn-outline-info btn-lg text-light ml1">Let's Get To Know You</button>
+    <section class="card-container h-100 mx-auto text-center">
+        <!-- Introductoin Front Card -->
+        <section class="card-front card-flip" id="wlcmsg">
+            <p class="ml3 mx-auto mb-0">Welcome to Mountain Mission School </p>
+            <p class="ml2 mb-5">We are excited that you are here</p>
+            <button class="btn btn-outline-info btn-lg text-light ml1">Let's Get To Know You</button>
+        </section>
+
+        <!-- Basic Info Back Card -->
+        <section class="card-back card-flip">
+            <div class="card mx-auto w-50  applicationCard">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Mountain Mission School Application</h5>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Applicant Information</h6>
+                    <form>
+                        <!-- Name -->
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control text-center" id="lastName"
+                                        placeholder="Last Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control text-center" id="firstName"
+                                        aria-describedby="firstName" placeholder="First Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control text-center" id="middleName"
+                                        placeholder="Middle Name">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Address -->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="number" class="form-control text-center" placeholder="Phone Number">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="dates">
+                                        <input type="text" name="dob" autocomplete="off" id="user1"
+                                            class="form-control text-center" placeholder="Date">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control text-center" placeholder="Street Address">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control text-center"
+                                        placeholder="City, State, Zip Code">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Check Boxes Info -->
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group mb-0">
+                                    <label for="anotherName">
+                                        Are you under 18 years old?
+                                    </label>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-md-12 ml-5">
+                                        <div class="custom-control custom-radio custom-control-inline d-inline">
+                                            <input type="radio" id="ageY" name="age"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="ageY">Yes</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline d-inline">
+                                            <input type="radio" id="ageN" name="age"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="ageN">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-check mb-0">
+                                    <label for="anotherName">
+                                        Are you a United States citizen?
+                                    </label>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-md-12 ml-5">
+                                        <div class="custom-control custom-radio custom-control-inline d-inline">
+                                            <input type="radio" id="citizenY" name="citizen"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="citizenY">Yes</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline d-inline">
+                                            <input type="radio" id="citizenN" name="citizen"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="citizenN">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group form-check mb-0">
+                                    <label for="anotherName">
+                                        Have you ever been convicted of a misdemeanor or felony crime?
+                                    </label>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-md-12 ml-5">
+                                        <div class="custom-control custom-radio custom-control-inline d-inline">
+                                            <input type="radio" id="crimeY" name="crime"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="crimeY">Yes</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline d-inline">
+                                            <input type="radio" id="crimeN" name="crime"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="crimeN">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="card-link mr-auto">Back</a>
+                        <a href="#" class="card-link">Continue</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </section>
 
-    <!-- Test the flip effect -->
-    
-
     <!-- Child's Identity -->
-    <section id="cardApplication">
+    <!-- <section id="cardApplication">
         <div class="card mx-auto w-50  applicationCard">
             <div class="card-body">
                 <h5 class="card-title text-center">Mountain Mission School Application</h5>
@@ -41,8 +174,9 @@
                     <div class="row">
                         <div class="col-md-2 mr-4">
                             <div class="dropdown">
-                                <button class="btn btn-outline-dark dropdown-toggle px-5" type="button" id="sexMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button class="btn btn-outline-dark dropdown-toggle px-5" type="button"
+                                    id="sexMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
                                     Sex
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="sexMenuButton">
@@ -115,6 +249,6 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
     <% include ../partials/footer  %>
 </body>
