@@ -1,16 +1,16 @@
 <body id="applyPage">
     <% include ../partials/header.ejs %>
 
-    <section class="card-container h-100 mx-auto text-center">
-        <!-- Introductoin Front Card -->
+    <section id="numOne" class="card-container h-100 mx-auto text-center">
+        <!-- Introductoin -->
         <section class="card-front card-flip" id="wlcmsg">
             <p class="ml3 mx-auto mb-0">Welcome to Mountain Mission School </p>
             <p class="ml2 mb-5">We are excited that you are here</p>
             <button class="btn btn-outline-info btn-lg text-light ml1">Let's Get To Know You</button>
         </section>
 
-        <!-- Basic Info Back Card -->
-        <section class="card-back card-flip">
+        <!-- Basic Info -->
+        <section id="basicInfo" class="card-back card-flip">
             <div class="card mx-auto w-50  applicationCard">
                 <div class="card-body">
                     <h5 class="card-title text-center">Mountain Mission School Application</h5>
@@ -77,13 +77,11 @@
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-md-12 ml-5">
                                         <div class="custom-control custom-radio custom-control-inline d-inline">
-                                            <input type="radio" id="ageY" name="age"
-                                                class="custom-control-input">
+                                            <input type="radio" id="ageY" name="age" class="custom-control-input">
                                             <label class="custom-control-label" for="ageY">Yes</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline d-inline">
-                                            <input type="radio" id="ageN" name="age"
-                                                class="custom-control-input">
+                                            <input type="radio" id="ageN" name="age" class="custom-control-input">
                                             <label class="custom-control-label" for="ageN">No</label>
                                         </div>
                                     </div>
@@ -119,13 +117,11 @@
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-md-12 ml-5">
                                         <div class="custom-control custom-radio custom-control-inline d-inline">
-                                            <input type="radio" id="crimeY" name="crime"
-                                                class="custom-control-input">
+                                            <input type="radio" id="crimeY" name="crime" class="custom-control-input">
                                             <label class="custom-control-label" for="crimeY">Yes</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline d-inline">
-                                            <input type="radio" id="crimeN" name="crime"
-                                                class="custom-control-input">
+                                            <input type="radio" id="crimeN" name="crime" class="custom-control-input">
                                             <label class="custom-control-label" for="crimeN">No</label>
                                         </div>
                                     </div>
@@ -136,119 +132,65 @@
                     </form>
                     <div class="d-flex mt-4">
                         <a href="#" class="card-link mr-auto">Back</a>
-                        <a href="#" class="card-link">Continue</a>
+                        <button class="btn btn-info ctn">Continue</button>
                     </div>
 
                 </div>
             </div>
         </section>
+
     </section>
 
-    <!-- Child's Identity -->
-    <!-- <section id="cardApplication">
-        <div class="card mx-auto w-50  applicationCard">
-            <div class="card-body">
-                <h5 class="card-title text-center">Mountain Mission School Application</h5>
-                <h6 class="card-subtitle mb-2 text-muted text-center">Child's Identity</h6>
-                <form>
-                    <div class="row mt-4">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <input type="text" class="form-control text-center" id="lastName"
-                                    placeholder="Last Name" required>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <input type="text" class="form-control text-center" id="firstName"
-                                    aria-describedby="firstName" placeholder="First Name" required>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <input type="text" class="form-control text-center" id="middleName"
-                                    placeholder="Middle Name">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 mr-4">
-                            <div class="dropdown">
-                                <button class="btn btn-outline-dark dropdown-toggle px-5" type="button"
-                                    id="sexMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    Sex
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="sexMenuButton">
-                                    <a class="dropdown-item" href="#">Male</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Female</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Rarther not say</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <div class="dates">
-                                    <input type="text" name="dob" autocomplete="off" id="user1"
-                                        class="form-control text-center" placeholder="Birthdate">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <input type="number" class="form-control text-center" placeholder="Present Age">
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <input type="text" class="form-control text-center" placeholder="Place of Birth">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="password" class="form-control text-center"
-                                    placeholder="Social Security No.">
-                            </div>
+    <section id="numTwo" class="card-container h-100 mx-auto text-center">
 
-                        </div>
-                        <div class="col-md-6 ">
-                            <div class="form-group form-check mb-0">
-                                <label for="anotherName">
-                                    Does child go by another name than that listed?
-                                </label>
-                            </div>
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-md-4 ml-5">
-                                    <input type="checkbox" class="form-check-input">
-                                    <label class="form-check-label" for="anotherNameYes">
-                                        Yes
-                                    </label>
-                                </div>
-                                <div class="col-md-2 ml-0">
-                                    <input type="checkbox" class="form-check-input">
-                                    <label class="form-check-label" for="anotherNameNo">
-                                        No
-                                    </label>
-                                </div>
-                            </div>
+        <!-- Front Card -->
+        <section id="frontCard" class="front card-flip">
+            <div class="card mx-auto w-50  applicationCard">
+                <div class="card-body">
 
-
-
-                        </div>
+                    <h3 class="pt-3">Great </h3>
+                    <h5 class="card-subtitle mb-2 text-muted text-cente">An email has been sent to you for verification
+                    </h5>
+                    <i class="far fa-paper-plane fa-9x pt-2 pt-4" style="color:#286341"></i>
+                    <div class="d-flex mt-4">
+                        <button class="btn btn-info cton ml-auto">Let's Continue</button>
                     </div>
 
-                </form>
-                <div class="d-flex mt-4">
-                    <a href="#" class="card-link mr-auto">Back</a>
-                    <a href="#" class="card-link">Continue</a>
                 </div>
-
             </div>
-        </div>
-    </section> -->
+        </section>
+
+        <!-- Back card -->
+        <section id="backCard" class="card-flip back">
+            <div class="card mx-auto w-50  applicationCard ">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Mountain Mission School Application</h5>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Applicant Information</h6>
+
+                    <h1 class="pt-5 pb-3">You Are Applying for: </h1>
+
+                    <div class="custom-control custom-radio custom-control-inline d-inline">
+                        <input type="radio" id="student" name="age" class="custom-control-input">
+                        <label class="custom-control-label h5" for="student">Student Position</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline d-inline">
+                        <input type="radio" id="staff" name="age" class="custom-control-input">
+                        <label class="custom-control-label h5" for="staff">Staff Position</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline d-inline">
+                        <input type="radio" id="volunteer" name="age" class="custom-control-input">
+                        <label class="custom-control-label h5" for="volunteer">Volunteer Position</label>
+                    </div>
+
+                    <div class="d-flex mt-4 pt-5">
+                        <button class="btn btn-info ml-auto">Continue</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </section>
+
     <% include ../partials/footer  %>
 </body>

@@ -57,9 +57,6 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
 </script>
 
-<!-- Flip  -->
-<!-- <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script> -->
-
 <!-- Date Picker -->
 <script src="bootstrap-datepicker.js"></script>
 
@@ -82,8 +79,19 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+
 
 <script>
+    // hide element
+    document.getElementById('numTwo').style.display = 'none'
+
+    // flip Application cards
+    $("#numTwo").flip({
+        trigger: 'manual'
+    });
+
     // Configure Slider
     $(".carousel").carousel({
         interval: 6000,
@@ -95,6 +103,23 @@
         $('.card-front').addClass('card-container card-flip clickedFront');
         $('.card-back').addClass('card-container card-flip clickedBack')
     });
+
+    // Flip effect
+    $('.ctn').on('click', function () {
+        $('#basicInfo').removeClass('card-container card-flip clickedBack')
+        $('#basicInfo').addClass('card-container card-flip clickedFront')
+        $('#frontCard').addClass('card-container card-flip clickedBack')
+        document.getElementById('numTwo').style.display = 'flex'
+        setTimeout(function () {
+            document.getElementById('numOne').style.display = 'none'
+        }, 500)
+    })
+
+    $('.cton').on('click',function(){
+        $('#numTwo').flip(true)
+    })
+
+
 
     // Get the current year for the copyright
     $("#year").text(new Date().getFullYear());
@@ -186,13 +211,6 @@
 
         })
 
-        $('.ml1').click(function () {
-            cardApplication = document.getElementById('cardApplication')
-            wlcmsg = document.getElementById('wlcmsg')
-            wlcmsg.style.display = 'none'
-            cardApplication.style.display = 'flex'
-        })
-
         $('[data-toggle="popover"]').popover()
 
         $('.donnateIcon').popover({
@@ -200,5 +218,4 @@
         })
 
     })
-    document.getElementById('cardApplication').style.display = 'none'
 </script>
