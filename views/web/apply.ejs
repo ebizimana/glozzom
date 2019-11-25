@@ -131,8 +131,7 @@
 
                     </form>
                     <div class="d-flex mt-4">
-                        <a href="#" class="card-link mr-auto">Back</a>
-                        <button class="btn btn-info ctn">Continue</button>
+                        <button class="btn btn-info ctn ml-auto">Continue</button>
                     </div>
 
                 </div>
@@ -167,7 +166,57 @@
                     <h5 class="card-title text-center">Mountain Mission School Application</h5>
                     <h6 class="card-subtitle mb-2 text-muted text-center">Applicant Information</h6>
 
-                    <h1 class="pt-5 pb-3">You Are Applying for: </h1>
+                    <h1 class="pt-5 pb-3">You Are Applying for a: </h1>
+
+                    <div class="custom-control custom-radio custom-control-inline d-inline">
+                        <input type="radio" id="student" name="age" class="custom-control-input">
+                        <label class="custom-control-label h5" for="student">Student Position</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline d-inline">
+                        <input type="radio" id="staff" name="age" class="custom-control-input">
+                        <label class="custom-control-label h5" for="staff">Staff Position</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline d-inline">
+                        <input type="radio" id="volunteer" name="age" class="custom-control-input">
+                        <label class="custom-control-label h5" for="volunteer">Volunteer Position</label>
+                    </div>
+
+                    <div class="d-flex mt-4 pt-5">
+                        <button class="btn btn-info ml-auto toStdProfile">Continue</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <section id="studentProfile" class="card-container h-100 mx-auto text-center">
+        <!-- Front Card -->
+        <section id="frontCard1" class="front card-flip">
+            <div class="card mx-auto w-50  applicationCard">
+                <div class="card-body">
+
+                    <h3 class="pt-3">Student Proflie </h3>
+                    <h5 class="card-subtitle mb-2 text-muted text-cente">An email has been sent to you for verification
+                    </h5>
+                    <i class="far fa-paper-plane fa-9x pt-2 pt-4" style="color:#286341"></i>
+                    <div class="d-flex mt-4">
+                        <button class="btn btn-info ml-auto toStdAppl">Let's Continue</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Back card -->
+        <section id="backCard2" class="card-flip back">
+            <div class="card mx-auto w-50  applicationCard ">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Mountain Mission School Application</h5>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Applicant Information</h6>
+
+                    <h1 class="pt-5 pb-3">Student Profile: </h1>
 
                     <div class="custom-control custom-radio custom-control-inline d-inline">
                         <input type="radio" id="student" name="age" class="custom-control-input">
@@ -189,7 +238,6 @@
                 </div>
             </div>
         </section>
-
     </section>
 
     <% include ../partials/footer  %>
