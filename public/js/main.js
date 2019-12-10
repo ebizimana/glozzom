@@ -1,6 +1,33 @@
-// hide element
-document.getElementById('numTwo').style.display = 'none'
-document.getElementById('studentProfile').style.display = 'none'
+// Lightbox Init
+$(document).on("click", '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
+// Get the current year for the copyright
+$("#year").text(new Date().getFullYear());
+
+// Init Slick
+$(".slider").slick({
+    infinite: true,
+    slideToShow: 1,
+    slideToScroll: 1
+});
+
+// Video Play
+$(function () {
+    // Auto play modal video
+    $(".video").click(function () {
+        var theModal = $(this).data("target"),
+            videoSRC = $(this).attr("data-video"),
+            videoSRCauto =
+            videoSRC +
+            "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+        $(theModal + " iframe").attr("src", videoSRCauto);
+        $(theModal + " button.close").click(function () {
+            $(theModal + " iframe").attr("src", videoSRC);
+        });
+    });
+});
 
 // flip Application cards
 $("#numTwo, #studentProfile").flip({
@@ -45,15 +72,7 @@ $('.toStdAppl').on('click', function () {
 
 
 
-// Get the current year for the copyright
-$("#year").text(new Date().getFullYear());
 
-// Init Slick
-$(".slider").slick({
-    infinite: true,
-    slideToShow: 1,
-    slideToScroll: 1
-});
 
 // Date Picker
 $(function () {
@@ -94,27 +113,7 @@ $(".slider").carousel({
     pause: "hover"
 });
 
-// Lightbox Init
-$(document).on("click", '[data-toggle="lightbox"]', function (event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-});
 
-// Video Play
-$(function () {
-    // Auto play modal video
-    $(".video").click(function () {
-        var theModal = $(this).data("target"),
-            videoSRC = $(this).attr("data-video"),
-            videoSRCauto =
-            videoSRC +
-            "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
-        $(theModal + " iframe").attr("src", videoSRCauto);
-        $(theModal + " button.close").click(function () {
-            $(theModal + " iframe").attr("src", videoSRC);
-        });
-    });
-});
 
 $(document).ready(function () {
     $('.displayMainRow').click(function () {
@@ -138,3 +137,7 @@ $(document).ready(function () {
     })
 
 })
+
+// hide element
+document.getElementById('numTwo').style.display = 'none'
+document.getElementById('studentProfile').style.display = 'none'
