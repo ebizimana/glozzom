@@ -4,6 +4,13 @@ body {
   margin: auto;
 }
 
+.navbar-dark {
+  background-color:#205f9ecc;
+}
+.btn-primary {
+  background-color: #205f9e; 
+}
+
 .navbar .nav-link {
   font-size: 14px;
   text-transform: uppercase;
@@ -16,7 +23,7 @@ body {
 }
 
 .carousel-item {
-  height: 660px;
+  height: 700px;
 }
 
 .carousel-image-1 {
@@ -244,4 +251,31 @@ body {
 
   .clickedBack {
     transform: rotateY(0deg)
+  }
+
+
+  /* MMS Today Page Styles */
+
+  .blog-header{
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .blog-header-logo{
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+  }
+
+  .bd-placeholder-img{
+    font-size: 1.125rem;
+    text-anchor: middle;
+    user-select:none;
+  }
+  
+  .border-bottom{
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .blog-main {
+    font-weight:400px;
   }

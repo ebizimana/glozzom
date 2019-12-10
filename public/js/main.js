@@ -3,6 +3,7 @@ $(document).on("click", '[data-toggle="lightbox"]', function (event) {
     event.preventDefault();
     $(this).ekkoLightbox();
 });
+
 // Get the current year for the copyright
 $("#year").text(new Date().getFullYear());
 
@@ -70,10 +71,6 @@ $('.toStdAppl').on('click', function () {
 })
 
 
-
-
-
-
 // Date Picker
 $(function () {
     $('.dates #user1').datepicker({
@@ -81,31 +78,6 @@ $(function () {
         'autoclose': true
     })
 })
-
-// Wrap every letter.
-var textWrapper1 = document.querySelector('.ml3');
-textWrapper2 = document.querySelector('.ml2')
-textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({
-        loop: false,
-    })
-    .add({
-        targets: ['.ml3 .letter', '.ml2 .letter'],
-        opacity: [0, 1],
-        easing: "easeInOutQuad",
-        duration: 500,
-        delay: (el, i) => 150 * (i + 1)
-    });
-
-anime({
-    targets: '.ml1',
-    translateX: [100, 250],
-    delay: 500,
-    direction: 'alternate',
-    loop: true
-});
 
 // TODO: Fix this,  Testimony Slider 
 $(".slider").carousel({
@@ -141,3 +113,28 @@ $(document).ready(function () {
 // hide element
 document.getElementById('numTwo').style.display = 'none'
 document.getElementById('studentProfile').style.display = 'none'
+
+// Wrap every letter.
+var textWrapper1 = document.querySelector('.ml3');
+textWrapper2 = document.querySelector('.ml2')
+textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({
+        loop: false,
+    })
+    .add({
+        targets: ['.ml3 .letter', '.ml2 .letter'],
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 500,
+        delay: (el, i) => 150 * (i + 1)
+    });
+
+anime({
+    targets: '.ml1',
+    translateX: [100, 250],
+    delay: 500,
+    direction: 'alternate',
+    loop: true
+});

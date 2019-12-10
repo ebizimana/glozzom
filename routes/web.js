@@ -6,14 +6,14 @@ router.get("/about.html", function (req, res) {
     res.render("../views/web/about");
 });
 
-// Services Page 
-router.get("/services.html", function (req, res) {
-    res.render("../views/web/services");
+// Donate Page 
+router.get("/donate.html", function (req, res) {
+    res.render("../views/web/donate");
 });
 
-// Blog Page 
-router.get("/blog.html", function (req, res) {
-    res.render("../views/web/blog");
+// MMS Today Page 
+router.get("/mmsToday.html", function (req, res) {
+    res.render("../views/web/mmsToday");
 });
 
 // Contact Page 
