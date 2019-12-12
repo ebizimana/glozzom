@@ -26,5 +26,10 @@ router.get("/apply", function (req, res) {
     res.render("../views/web/apply");
 });
 
+// Home Ministry Page
+router.get('/homeMinistry', function(req,res){
+    res.render('../views/web/homeMinistry')
+})
+
 
 module.exports = router
