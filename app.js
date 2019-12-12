@@ -1,10 +1,15 @@
 // Packages Setup 
-var express = require("express"),
-  app = express();
+var express    = require("express"),
+    mongoose   = require('mongoose'),
+    url        = 'mongodb://localhost/mms'
+    app        = express();
 
 // Models 
+var User            = require('./models/user'),
+    Homeministry   = require('./models/homeMinistry')
 
 // App Config 
+mongoose.connect(url,{useNewUrlParser:true})
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
