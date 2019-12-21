@@ -3,11 +3,11 @@ var express = require ("express"),
 
 // Home Router
 router.get('/', function(req,res){
-    res.render("../views/web/index")
+    res.render("web/index")
 })
 
-router.get("/index.html", function (req, res) {
-    res.render("../views/web/index");
+router.get("/index", function (req, res) {
+    res.render("web/index");
 });
 
 // Sign Up form 

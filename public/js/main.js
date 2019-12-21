@@ -30,10 +30,7 @@ $(function () {
     });
 });
 
-// flip Application cards
-$("#numTwo, #studentProfile").flip({
-    trigger: 'manual'
-});
+
 
 // Configure Slider
 $(".carousel").carousel({
@@ -113,6 +110,11 @@ $(document).ready(function () {
 // hide element
 document.getElementById('numTwo').style.display = 'none'
 document.getElementById('studentProfile').style.display = 'none'
+
+// flip Application cards
+$("#numTwo, #studentProfile").flip({
+    trigger: 'manual'
+});
 
 // Wrap every letter.
 var textWrapper1 = document.querySelector('.ml3');
