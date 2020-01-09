@@ -1,17 +1,22 @@
 // Packages Setup 
-var express    = require("express"),
-    mongoose   = require('mongoose'),
-    url        = 'mongodb://localhost/mms'
-    app        = express();
+var express           = require("express"),
+    mongoose          = require('mongoose'),
+    bodyParser        = require('body-parser'),
+    methodOverride    = require('method-override')
+    url               = 'mongodb://localhost/mms',
+    app               = express();
 
 // Models 
 var User            = require('./models/user'),
-    Homeministry   = require('./models/homeMinistry')
+    Homeministry    = require('./models/homeMinistry'),
+    Schoolministry  = require('./models/schoolMinistry')
 
 // App Config 
 mongoose.connect(url,{useNewUrlParser:true})
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(methodOverride('_method'))
 
 // Passport Config
 

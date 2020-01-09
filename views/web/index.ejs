@@ -13,6 +13,8 @@
 
       <div class="carousel-inner">
         <div class="carousel-item carousel-image-1 active">
+          <% pic = homePics[Math.floor(Math.random() * homePics.length)]  %>
+            <img src="<%= pic.homeurl %>" class="carousel-image-1">
           <div class="container">
             <div class="carousel-caption d-none d-sm-block text-right mb-5">
               <h1 class="display-3 right-overlay">Home</h1>
@@ -24,7 +26,9 @@
           </div>
         </div>
 
-        <div class="carousel-item carousel-image-2">
+        <div class="carousel-item">
+          <% schoolPic = schoolPics[Math.floor(Math.random()*schoolPics.length)] %>
+          <img src="<%=schoolPics.schoolUrl %>" class="carousel-image-1">
           <div class="container">
             <div class="carousel-caption d-none d-sm-block mb-5">
               <h1 class="display-3 center-overlay">School</h1>

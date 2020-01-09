@@ -1,14 +1,27 @@
 <% include ../partials/header %>
 
-<div class="container">
-    <h1>Add A New Picture To The Home Database</h1>
-    <div class="row">
-        <form action="" method='post'>
+<div class="container" style="margin: 200px auto;">
+    <div class="row d-flex justify-content-center">
+        <form action="/" method='post'>
+            <h1>Add A New Picture To The Home Database</h1>
             <div class="form-group">
-                <input type="text" class="form-control" name="url" placeholder="Add a Url for the picture" required>
+                <input type="text" class="form-control text-center" name="url" placeholder="Add a Url for the picture" required>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="description" placeholder="Add a description (optional)">
+                <input type="text" class="form-control text-center" name="description" placeholder="Add a description (optional)">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-success btn-block">Submit</button>
+            </div>
+        </form>
+
+        <form class="p-4" action="/" method="post">
+            <h1> Add A New Picture To the School Database</h1>
+            <div class="form-group">
+                <input type="text" class="form-control text-center" name="schoolUrl" placeholder="Add a Url for the picture" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control text-center" name="schoolDescription" placeholder="Add a description (optional)">
             </div>
             <div class="form-group">
                 <button class="btn btn-lg btn-success btn-block">Submit</button>

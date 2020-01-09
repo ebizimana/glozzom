@@ -1,5 +1,8 @@
-var express = require('express'),
-    router = express.Router();
+var express          = require('express'),
+    Homeministry     = require('../models/homeMinistry'),
+    Schoolministry   = require('../models/schoolMinistry'),
+    router           = express.Router();
+
 
 // About Us Page
 router.get("/about", function (req, res) {
@@ -31,9 +34,49 @@ router.get('/homeMinistry', function(req,res){
     res.render('web/homeMinistry')
 })
 
-// New - Display form to add a picture in the db
+// New - Display form 
 router.get('/new',function(req,res){
     res.render('web/new')
+})
+
+// Create - Add a new picture to db
+router.post('/',function(req,res){
+    var url               = req.body.url,
+        desc              = req.body.description,
+        schoolUrl         = req.body.schoolUrl,
+        schoolDescription = req.body.schoolDescription;
+    var newPic = {
+        homeurl:url,
+        desc: desc
+    };
+
+    var schoolPic = {
+        schoolUrl:schoolUrl,
+        schoolDescription:schoolDescription
+    };
+    
+    Homeministry.create(newPic, function(err,pic){
+        if(err){
+            console.log(err)
+        } else {
+            res.redirect('/index')
+        }
+    }) 
+
+    Schoolministry.create(schoolPic, function(err,pic){
+        if(err){
+            console.log(err)
+        } else {
+            res.redirect('/index')
+        }
+    })
+
+
+})
+
+// Show all Homelife Pics
+router.get('/index', function(req,res){
+
 })
 
 

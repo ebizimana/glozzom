@@ -1,13 +1,29 @@
-var express = require ("express"),
-    router = express.Router();
+var express          = require ("express"),
+    router           = express.Router();
+    Homeministry     = require('../models/homeMinistry');
+    Schoolministry   = require('../models/schoolMinistry')
+
 
 // Home Router
 router.get('/', function(req,res){
-    res.render("web/index")
+    Homeministry.find({}, function(err,allHomePics){
+        if(err){
+            console.log(err)
+        } else {
+            Schoolministry.find({},function(err,allSchoolPics){
+                if(err){
+                    console.log(err)
+                } else {
+                    res.render('web/index', {schoolPics: allSchoolPics, homePics:allHomePics})
+                }
+            })
+        }
+    })
+
 })
 
 router.get("/index", function (req, res) {
-    res.render("web/index");
+    res.redirect('/')
 });
 
 // Sign Up form 
